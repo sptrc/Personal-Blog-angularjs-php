@@ -1,0 +1,88 @@
+<!-- banner -->
+<div class="container-fluid bg-danger" id="banner" ng-controller="ownerCon" style="	background-image: url('blog-admin/image/{{banner}}');">
+	<div class="filter">
+		<p>
+			<img src="blog-admin/image/{{logo}}" alt="No Image" height="300">
+		</p>
+	</div>
+</div>
+<!-- banner -->
+<!-- mini section -->
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 col-sm-6 col-xs-12 secPad">
+			<div class="miniSec" style="background-image: url('https://demo.indieground.net/odyssey/demo2/wp-content/uploads/2017/05/odysseytheme_demo2_promobox_01-min-1.jpg');">
+				<a href="#!/about">
+					<div class="title">
+						<h2>About me</h2>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="col-md-4 col-sm-6 col-xs-12 secPad">
+			<div class="miniSec" style="background-image:url(https://demo.indieground.net/odyssey/demo2/wp-content/uploads/2017/05/odysseytheme_demo2_promobox_02-min-1.jpg)">
+				<a href="#!/gallery">
+					<div class="title">
+						<h2>gallery</h2>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="col-md-4 col-sm-6 col-xs-12 secPad">
+			<div class="miniSec" style="background-image:url(https://demo.indieground.net/odyssey/demo2/wp-content/uploads/2017/05/odysseytheme_demo2_promobox_03-min-1.jpg)">
+				<a href="#!/contact">
+					<div class="title">
+						<h2>contact</h2>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- mini section -->
+<!-- text section -->
+<div class="container textSection">
+	<h2>My Blog</h2>
+	<p>
+		A blog is a frequently updated online personal journal or diary. It is a place to express yourself to the world. ... For our purposes we'll say that a blog is your own website that you are going to update on an ongoing basis. Blog is a short form for the word weblog and the two words are used interchangeably.
+	</p> 
+</div>
+<!-- text section -->
+<!-- post section -->
+<div class="container">
+	<div class="row">
+		<div class="col-md-8" ng-controller="postCon">
+
+			<div class="posts row" ng-repeat="post in posts">
+				<div class="col-md-4 postImg" style="background: url('blog-admin/post/{{post.image}}'); background-size: cover;">
+					<div class="postInterl">
+						<span>CONTINUE READING</span>
+					</div>
+				</div>
+				<div class="col-md-8">
+					<a href="#!/category/{{post.c_id}}"><p class="postCat">{{post.category}}</p></a>
+					<a href="#!/post/{{post.id}}"><h2 class="postTitle">{{post.title}}</h2></a>
+					<p class="postBody">{{post.body | limitTo: 130}}...</p>
+					<p ng-init="comn(post.id)">
+						<i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;&nbsp;{{post.date | date: 'MMMM dd, yyyy'}}&nbsp;&nbsp;
+						<i class="fa fa-comment-o" aria-hidden="true"></i>&nbsp;&nbsp;{{post.cmnt}} comments
+					</p>
+				</div>
+			</div>
+
+		</div>
+		<div class="col-md-4">
+			<div class="sidebar">
+				<div class="inSidebar" ng-controller="ownerCon">
+					<p><img src="blog-admin/image/{{img}}" alt="" class="img-circle" width="150"></p>
+					<h3>{{name}}</h3>
+					<p><i class="fa fa-map-marker" aria-hidden="true"></i> {{location}}</p>
+					<p class="sideText">
+						{{intro}}
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<!-- post section -->

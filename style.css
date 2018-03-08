@@ -1,0 +1,513 @@
+body{
+	background-color: #2d303e;
+	font-family: 'Montserrat', sans-serif;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+i{
+	color: #ffafa1;
+}
+.nopadding {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+.filter{
+	background: rgba(255,0,0,0.1);
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	top: 0;
+}
+/*navbar*/
+.navbar{
+	background: #ffafa1;
+	text-align: center;
+	margin-bottom: 0;
+
+}
+
+.navbar-nav a{
+	padding: 10px 12px;
+	text-transform: uppercase;
+	font-size: 14px;
+	letter-spacing: 2px;
+	font-weight: 700;
+	transition: 0.5s;
+	color: #333847;
+}
+
+.navbar-nav{
+	float: none;
+	font-size: 10px;
+}
+
+.navbar-nav>li{
+	float: none;
+	display: inline-block;
+}
+
+.navbar-nav>li>a:hover{
+	background: transparent;
+	color: white;
+}
+
+
+/*banner*/
+
+#banner{
+	height: 600px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-bottom: 60px;
+	padding: 0;
+}
+
+#banner p{
+	text-align: center;
+	padding: 10% 0;
+}
+
+/*mini sec*/
+.secPad{
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.miniSec{
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 15px;
+	height: 240px;
+}
+.title{
+	border: 1px solid white;
+	color: #fff;
+	transition: 0.5s;
+	height: 100%;
+}
+.title>h2{
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 25px;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 29% 0%;
+}
+@media screen and (max-width:760px) {
+	.title>h2{
+		margin: 15% 0%;	
+	}
+}
+.title:hover{
+	border: 1px solid white;
+	color: black;
+	background-color: rgba(255,255,255,0.8);
+}
+
+/*testSection*/
+.textSection{
+	color:#ffebe8;
+	margin-top: 60px;
+	text-align: center;
+	margin-bottom: 60px;
+}
+.textSection > h2{
+	text-transform: uppercase;
+	font-weight: 700;
+	margin: 30px 0px 20px 0px;
+	font-size:16px;
+}
+.textSection>p{
+	font-family: 'Lora', serif;
+	max-width: 700px;
+	margin: 10px auto 0;
+	font-size: 15px;
+	line-height: 25px;
+}
+
+/*index Posts*/
+.posts{
+	color:#ffebe8;
+	text-decoration: none;
+	transition: 0.5s;
+	margin-bottom: 20px;
+}
+.posts .col-md-8{
+	padding: 10px 30px;
+}
+.posts:hover{
+	background-color: rgba(255, 175, 161, 0.1);
+}
+.posts:hover .postInterl{
+	display: inherit;
+}
+.postCat{
+	color:#ffebe8;
+	border-bottom: 1px solid #ffafa1;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 10px;
+	line-height: 1.5em;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	padding: 9px 0;
+	width: auto;
+}
+.postTitle{
+	color:#ffebe8;
+	font-size: 24px;
+	text-transform: uppercase;
+	padding: 15px 0 ;
+	margin: 0 0 5px 0;
+	font-weight: 700;
+}
+.postBody{
+	font-family: 'Lora', serif;
+	line-height: 22px;
+	font-size: 14px;	
+}
+.postImg{
+	height: 230px;
+	padding: 0;
+	transition: 1s;
+}
+@media screen and (max-width:760px) {
+	.postImg{
+		margin:20px;	
+	}
+}
+.postInterl{
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,1);
+	opacity: 0.8;
+	text-align: center;
+	padding: 40% 0;
+	display: none;
+	transition: background 0.5s;
+}
+.postInterl>span{
+	color: white;
+	padding: 9px;
+	letter-spacing: 3px;
+	border: 1px solid white;
+}
+.postDate{
+	color:#ffebe8;
+}
+/*sidebar*/
+
+.sidebar{
+	background-image: url('https://demo.indieground.net/odyssey/demo2/wp-content/uploads/2017/05/odysseytheme_demo2_authorbg-min-1.jpg');
+	background-size: cover;
+	text-align: center;
+	padding: 0;
+	color: #ffebe8;
+}
+
+.inSidebar{
+	background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+	height: 100%;
+	padding: 15% 0;
+}
+
+.inSidebar h3{
+	font-weight: 700;
+}
+
+.sideText{
+	font-size: 18px;
+	padding: 0 43px;
+	margin-top: 30px;
+	line-height: 23px;
+	font-family: 'Lora', serif;
+}
+
+/*footer*/
+
+.footer{
+	background: #4f4f5c;
+	padding: 20px 0;
+	margin-top:40px;
+}
+.footerCat{
+	color: #ffebe8;
+	padding: 10px 0;
+}
+.footerCat > li{
+	display: inline;
+	margin: 5px;
+	border: 1px solid white;
+	padding: 10px;
+}
+.footerCat > li > a{
+	text-decoration:none;
+	color: #ffebe8;
+}
+.footerSocial a{
+	color: white;
+}
+
+
+/*category*/
+
+
+.catBanner{
+	height: 300px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-bottom: 60px;
+	background-position: center;
+	padding: 0;
+
+}
+
+.catHead{
+	color: #ffebe8;
+	text-align: center;
+	margin-bottom: 40px;	
+}
+.catHead fixed {
+	display: block;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+}
+.catHead heading{
+	font-weight: 700;
+	font-size: 37px;
+	text-transform: uppercase;
+}
+.catHead p {
+	font-family: lora;
+	line-height: 27px;
+}
+.catFx{
+	color:#ffebe8;
+	border-bottom: 1px solid #ffafa1;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 10px;
+	line-height: 1.5em;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	padding: 9px 0;
+	width: auto;
+}
+.catPost{
+	margin-top: 40px;
+}
+.catPostTitle{
+	color:#ffebe8;
+	font-size: 30px;
+	text-transform: uppercase;
+	padding: 15px 0 ;
+	margin: 0 0 5px 0;
+	font-weight: 700;
+	text-align: center;
+}
+.catPostTitle:hover{
+	color: #ffafa1;
+}
+.catPostDetail{
+	color:#ffebe8;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.catPostBody{
+	font-family: 'Lora', serif;
+	line-height: 22px;
+	font-size: 14px;	
+	color:#ffebe8;
+	margin-top: 40px;
+	padding: 0 30px;
+	font-size: 16px;
+	line-height: 30px;
+}
+
+/*post*/
+
+.postSing{
+	/*padding: 30px 0; */
+	margin-top: 40px;
+}
+.postHead{
+	margin-top: 40px;
+}
+
+/*about*/
+.aboutName{
+	color:#ffebe8;
+	font-size: 35px;
+	text-transform: uppercase;
+	padding: 60px 0 ;
+	margin: 0 0 5px 0;
+	letter-spacing: 5px;
+	font-weight: 700;
+	text-align: center;
+}
+
+.aboutDetail{
+	color:#ffebe8;
+	font-family: 'Lora', serif;
+	line-height: 22px;
+	font-size: 14px;
+	padding: 100px;
+	font-size: 18px;
+	line-height: 30px;	
+}
+
+/*comment*/
+.comment{
+	color:#ffebe8;	
+} 
+.comment h4{
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 5px;
+	padding: 10px 0;
+}
+.comment name{
+	display: block;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 17px;
+}
+.comment time{
+	display: block;
+	font-family: lora;
+}
+.comment comment{
+	display: block;
+	font-family: lora;
+	padding: 20px 0;
+	font-size: 18px;	
+}
+.comment label{
+	text-transform: uppercase;
+	font-weight: 500;
+	padding-top: 10px;
+}
+.comment input,textarea{
+	background: #4f4f5c;
+	border: none;
+	display: block;
+	padding: 15px 25px;
+	width: 100%;
+} 
+.comment textarea{
+	resize: none;
+}
+.comment button{
+	background: transparent;
+	border: 1px solid white;
+	padding: 10px 20px;
+	font-size: 18px;
+	text-transform: uppercase;
+}
+.comment button[disabled=disabled]{
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+button.fblogin {
+	background: #4267b2;
+	border: none;
+	color: white;
+}
+.fblogin i{
+	color: white;
+}
+/*contacts*/
+
+.contact{
+	color:#ffebe8;	
+
+} 
+.contact fixed{
+	font-size: 15px;
+	text-transform: uppercase;
+	display: block;
+	text-align: center;
+}
+.contact heading{
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 33px;
+	text-align: center;
+}
+.contact p{
+	margin-top: 40px;
+	font-family: lora;
+	font-size: 16px;
+	line-height: 25px;
+	text-align: left;
+}
+.contact h4{
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 5px;
+	padding: 10px 0;
+}
+.contact .input{
+	margin-top:20px ;
+}
+.contact label{
+	text-transform: uppercase;
+	font-weight: 500;
+}
+.contact input,textarea{
+	background: #4f4f5c;
+	border: none;
+	display: block;
+	padding: 15px 25px;
+} 
+.contact input{
+	width: 40%;
+}
+
+@media screen and (max-width:760px) {
+	.contact input{
+		width: 100%;
+	}	
+}
+.contact textarea{
+	resize: none;
+}
+.contact button{
+	background: transparent;
+	border: 1px solid white;
+	padding: 10px 20px;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.contact button[disabled=disabled]{
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+.carousel-indicators li{
+	margin-left: 2px;
+}
+
+/*animation*/
+
+main.ng-enter{
+	transition: 0.5s linear;
+	opacity: 0;
+	transform: translateY(30px);
+}
+
+main.ng-enter.ng-enter-active{
+	opacity:1;
+	transform: translateY(0);
+}
+
+.cmnt.ng-enter{
+	transition: 0.5s;
+	transform: scale(0);
+}
+.cmnt.ng-enter.ng-enter-active{
+	transform: scale(1);
+}

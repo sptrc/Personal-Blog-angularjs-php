@@ -1,0 +1,43 @@
+
+<!-- ################################################################### -->
+<!-- banner -->
+<div class="container-fluid catBanner" style="	background-image: url('https://wallpaperscraft.com/image/girl_model_wall_graffiti_pretty_69510_3840x1200.jpg');">
+	<div class="filter"></div>
+</div>
+<!-- banner -->
+
+<!-- text section -->
+<div class="container">
+	<div class="contact">
+		<fixed>Let's keep in touch</fixed>
+		<center><heading>Contacts</heading></center>
+		<p>The world is a book, and those who do not travel read only one page. To my mind, the greatest reward and luxury of travel is to be able to experience everyday things as if for the first time, to be in a position in which almost nothing is so familiar it is taken for granted
+		</p>
+		<h4>send a message</h4>
+		<br>
+		<form action="mail.php" method="post" name="conForm">
+			<div class="input">
+				<label for="name">Name</label>
+				<input type="text" name="name" ng-model="contact.name" required>
+			</div>
+			<div class="input">
+				<label for="email">Email</label>
+				<input type="email" name="email" ng-model="contact.email" required>
+			</div>
+			<div class="input">
+				<label for="subject">Subject</label>
+				<input type="text" name="subject" ng-model="contact.subject" required>
+			</div>
+			<div class="input">
+				<label for="message">Message</label>
+				<textarea name="message" ng-model="contact.msg" cols="100" rows="5" required></textarea>
+			</div>
+			<div class="input">
+				<button name="send" ng-disabled="conForm.$invalid">Send</button>
+			</div>
+		</form>
+		<!-- <p>{{contact}}</p> -->
+	</div>
+</div>
+<!-- text section -->
+<!-- ######################################################### -->

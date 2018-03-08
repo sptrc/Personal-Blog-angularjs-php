@@ -1,0 +1,98 @@
+
+<!-- ################################################################### -->
+
+
+<!-- post section -->
+<div class="container postSing">
+	<img src="blog-admin/post/{{image}}" alt="" width="100%">
+	<div class="row">
+		<div class="postHead">
+			<center><span class="catFx">TRAVEL</span></center>
+			<h2 class="catPostTitle">{{title}}</h2>
+			<p class="catPostDetail">
+				<i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;&nbsp;{{date | date: 'MMMM dd, yyyy'}}&nbsp;&nbsp;
+				<i class="fa fa-comment-o" aria-hidden="true"></i>&nbsp;&nbsp;{{cmnt}} COMMENTS
+			</p>
+			<div class="col-md-8">
+				<p class="catPostBody">{{body}}</p>
+			</div>
+
+		</div>
+		<div class="col-md-4">
+			<div class="sidebar">
+				<div class="inSidebar" ng-controller="ownerCon">
+					<p><img src="blog-admin/image/{{img}}" alt="" class="img-circle" width="150"></p>
+					<h3>{{name}}</h3>
+					<p><i class="fa fa-map-marker" aria-hidden="true"></i> {{location}}</p>
+					<p class="sideText">
+						{{intro}}
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<!-- post section -->
+<!-- comment section -->
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+			<div class="comment">
+				<h4 class="text-center">Comments</h4>
+				<div class="row cmnt" ng-repeat="comment in comments | filter: {'post':id}">
+					<div class="col-md-2 col-xs-2">
+						<img ng-src="{{comment.pic}}" alt="" width="80%" class="img-circle">
+						<!-- https://secure.gravatar.com/avatar/7e4b7141cf78a67bf30963414ceec7cb?s=60&d=mm&r=g -->
+					</div>
+					<div class="col-md-10 col-xs-10">
+						<div>
+							<name>{{comment.name}}</name>
+							<time>{{comment.date | date: 'MMMM dd, yyyy'}}</time>
+							<comment>{{comment.comment}}</comment>
+							<hr>
+						</div>
+					</div>
+				</div>
+				<div ng-hide="(comments[0].id>0)" class="text-center">No Comments to Show</div>
+				<br>
+				<h4 class="text-center">Leave a comment</h4>
+				<div  class="text-center">
+					<h5>Login In To Comment</h5>
+					<button class="btn fblogin" role='button' ng-click="fbLogin()" ng-hide="login">
+						<i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i> &nbsp; &nbsp;
+						Login with Facebook
+					</button>
+				</div>
+				<form name="commentF" ng-submit="submit()" novalidate ng-show="login">
+					<div class="row">
+						<div class="col-md-4 col-xs-12">
+							<label for="name">Name</label>
+							<input type="text" id="name"  ng-model="comment.name" required readonly>
+						</div>
+						<div class="col-md-4 col-xs-12">
+							<label for="email">Email</label>
+							<input type="email" id="email"  ng-model="comment.email" required readonly>
+						</div>
+						<div class="col-md-4 col-xs-12">
+							<label for="website">Website</label>
+							<input type="text" id="website" ng-model="comment.website" >
+						</div>
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-md-12 col-xs-12">
+							<textarea placeholder="COMMENT" ng-model="comment.comment" required></textarea>
+						</div>
+					</div>
+					<br>
+					<div class="text-center">
+						<button ng-disabled="commentF.$invalid">Submit</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- comment section -->
+<!-- ######################################################### -->

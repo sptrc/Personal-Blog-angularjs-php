@@ -1,0 +1,54 @@
+
+<!-- ################################################################### -->
+<!-- banner -->
+<div class="container-fluid catBanner" style="	background-image: url('blog-admin/banner/{{banner}}');">
+	<div class="filter"></div>
+</div>
+<!-- banner -->
+
+<!-- text section -->
+<div class="container catHead" >
+	<fixed>BROWSING CATEGORY</fixed>
+	<heading>{{category}}</heading>
+	<p>
+		{{description}}
+	</p>
+</div>
+<!-- text section -->
+<!-- post section -->
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+			<center><span class="catFx">{{category}}</span></center>
+
+			<div class="catPost" ng-repeat="post in posts">
+				<a href="#!/post/{{post.id}}"><h2 class="catPostTitle">{{post.title}}</h2></a>
+				<p class="catPostDetail">
+					<i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;&nbsp;{{post.date | date: 'MMMM dd, yyyy'}}&nbsp;&nbsp;
+					<i class="fa fa-comment-o" aria-hidden="true"></i>&nbsp;&nbsp;{{post.cmnt}} COMMENTS
+				</p>
+				<img src="blog-admin/post/{{post.image}}" alt="" width="100%">
+				<p class="catPostBody">
+					{{post.body | limitTo: 200}}........<a href="#!/post/{{post.id}}" style="color:white"><b>Read More</b></a>
+				</p>
+				<hr>
+			</div>
+
+		</div>
+		<div class="col-md-4">
+			<div class="sidebar">
+				<div class="inSidebar" ng-controller="ownerCon">
+					<p><img src="blog-admin/image/{{img}}" alt="" class="img-circle" width="150"></p>
+					<h3>{{name}}</h3>
+					<p><i class="fa fa-map-marker" aria-hidden="true"></i> {{location}}</p>
+					<p class="sideText">
+						{{intro}}
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<!-- post section -->
+<!-- ######################################################### -->
